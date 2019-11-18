@@ -23,4 +23,5 @@ jobs:
     - name: Run SSH command
       uses: appleboy/ssh-action@v0.0.2
       with:
+        host: localhost
         command:  mvn deploy -Dregistry=https://maven.pkg.github.com/kharels -Dtoken=${{ secrets.hms_pkg_reg }}
