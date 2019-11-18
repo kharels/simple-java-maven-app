@@ -21,6 +21,6 @@ jobs:
         name: my_app
         path: /home/runner/work/simple-java-maven-app/simple-java-maven-app/target/my-app-1.0-SNAPSHOT.jar
     - name: Run SSH command
-      uses: garygrossgarten/github-action-ssh@v0.3.0
+      uses: appleboy/ssh-action@v0.0.2
       with:
         command:  mvn deploy -Dregistry=https://maven.pkg.github.com/kharels -Dtoken=${{ secrets.hms_pkg_reg }}
