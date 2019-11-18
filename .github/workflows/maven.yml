@@ -1,4 +1,4 @@
-name: Java CI
+name: Sample Java CI
 
 on: [push]
 
@@ -20,7 +20,3 @@ jobs:
       with:
         name: my_app
         path: /home/runner/work/simple-java-maven-app/simple-java-maven-app/target/my-app-1.0-SNAPSHOT.jar
-    - name: Publish package
-      uses: LucaFeger/action-maven-cli@master
-      with:
-        args:  deploy -Dregistry=https://maven.pkg.github.com/kharels -Dtoken=${{ secrets.hms_pkg_reg }}
