@@ -15,7 +15,8 @@ jobs:
         java-version: 1.8
     - name: Build with Maven
       run: mvn -B package --file pom.xml
-    - name: actions/upload-artifact@v1.0.0
+    - name: upload artifact
+      uses: actions/upload-artifact@v1.0.0
       with:
-        name: upload artifact
+        name: my_app
         path: /home/runner/work/simple-java-maven-app/simple-java-maven-app/target/my-app-1.0-SNAPSHOT.jar
